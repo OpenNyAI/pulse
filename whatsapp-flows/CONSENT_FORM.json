@@ -1,0 +1,54 @@
+{
+  "version": "3.1",
+  "screens": [
+    {
+      "id": "CONSENT_FORM_FINAL",
+      "title": "Consent Form",
+      "terminal": true,
+      "success": true,
+      "data": {},
+      "layout": {
+        "type": "SingleColumnLayout",
+        "children": [
+          {
+            "type": "Form",
+            "name": "consent_form",
+            "children": [
+              {
+                "type": "TextHeading",
+                "text": "ODR Consent Form"
+              },
+              {
+                "type": "TextBody",
+                "text": "I confirm that I've read and understand the terms of representation by provider. I agree to be represented in the described legal matter and acknowledge the fee structure, billing terms, and potential costs.I understand the attorney-client privilege and agree to communicate promptly and honestly. I'm aware of the conditions for terminating the relationship and its consequences."
+              },
+              {
+                "type": "TextInput",
+                "name": "name",
+                "label": "Name",
+                "required": true
+              },
+              {
+                "type": "TextInput",
+                "name": "address",
+                "label": "Address",
+                "required": true
+              }
+            ]
+          },
+          {
+            "type": "Footer",
+            "label": "Submit",
+            "on-click-action": {
+              "name": "complete",
+              "payload": {
+                "name": "${form.name}",
+                "address": "${form.address}"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

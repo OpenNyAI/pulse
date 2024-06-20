@@ -1,0 +1,108 @@
+{
+    "version": "3.1",
+    "screens": [
+        {
+            "id": "DOCUMENTS_CHECK_FORM",
+            "title": "Documents Check Form",
+            "terminal": true,
+            "success": true,
+            "data": {},
+            "layout": {
+                "type": "SingleColumnLayout",
+                "children": [
+                    {
+                        "type": "Form",
+                        "name": "documents_check_data",
+                        "children": [
+                            {
+                                "type": "TextHeading",
+                                "text": "Documents Check"
+                            },
+                            {
+                                "type":"TextCaption",
+                                "text":"Please confirm if you have the following documents"
+                            },
+                            {
+                                "type": "RadioButtonsGroup",
+                                "name": "aadhaar",
+                                "label": "Aadhaar number",
+                                "required": true,
+                                "data-source": [
+                                    {
+                                    "id":"0",
+                                    "title": "I have"
+                                    },
+                                    {
+                                        "id":"1",
+                                        "title":"I don't have"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "RadioButtonsGroup",
+                                "name": "pan",
+                                "label": "PAN",
+                                "required": true,
+                                "data-source": [
+                                    {
+                                    "id":"0",
+                                    "title": "I have"
+                                    },
+                                    {
+                                        "id":"1",
+                                        "title":"I don't have"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "RadioButtonsGroup",
+                                "name": "gst",
+                                "label": "GST number",
+                                "required": true,
+                                "data-source": [
+                                    {
+                                    "id":"0",
+                                    "title": "I have"
+                                    },
+                                    {
+                                        "id":"1",
+                                        "title":"I don't have"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "RadioButtonsGroup",
+                                "name": "registered_em_uam",
+                                "label": "registered EM-II or UAM",
+                                "required": true,
+                                "data-source": [
+                                    {
+                                    "id":"0",
+                                    "title": "I have"
+                                    },
+                                    {
+                                        "id":"1",
+                                        "title":"I don't have"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Footer",
+                                "label": "Submit",
+                                "on-click-action": {
+                                    "name": "complete",
+                                    "payload": {
+                                        "aadhaar": "${documents_check_data.aadhaar}",
+                                        "pan": "${documents_check_data.pan}",
+                                        "gst": "${documents_check_data.gst}",
+                                        "registered_em_uam": "${documents_check_data.registered_em_uam}"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "version": "3.1",
+    "screens": [
+        {
+            "id": "UDYAM_REGISTRATION_FORM",
+            "title": "Udyam Registration Form",
+            "terminal": true,
+            "success": true,
+            "data": {},
+            "layout": {
+                "type": "SingleColumnLayout",
+                "children": [
+                    {
+                        "type": "Form",
+                        "name": "udyam_registration_data",
+                        "children": [
+                            {
+                                "type": "TextHeading",
+                                "text": "Udyam Registration"
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "entrepreneurName",
+                                "label": "Name of Entrepreneur",
+                                "input-type": "text",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "aadhaarNumber",
+                                "label": "Aadhaar Number",
+                                "input-type": "number",
+                                "required": true
+                            },
+                            {
+                                "type": "Dropdown",
+                                "name": "enterpriseType",
+                                "label": "Type of Enterprise",
+                                "required": true,
+                                "data-source": [
+                                    {
+                                        "id": "proprietorship",
+                                        "title": "Proprietorship"
+                                    },
+                                    {
+                                        "id": "partnership",
+                                        "title": "Partnership"
+                                    },
+                                    {
+                                        "id": "huf",
+                                        "title": "Hindu Undivided Family (HUF)"
+                                    },
+                                    {
+                                        "id": "company",
+                                        "title": "Company"
+                                    },
+                                    {
+                                        "id": "llp",
+                                        "title": "Limited Liability Partnership (LLP)"
+                                    },
+                                    {
+                                        "id": "cooperative_society",
+                                        "title": "Cooperative Society"
+                                    },
+                                    {
+                                        "id": "society",
+                                        "title": "Society"
+                                    },
+                                    {
+                                        "id": "trust",
+                                        "title": "Trust"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "DatePicker",
+                                "name": "dateOfIncorporation",
+                                "label": "Date of Incorporation",
+                                "required": true
+                            },
+                            {
+                                "type": "DatePicker",
+                                "name": "dateOfCommencement",
+                                "label": "Date of Commencement of Business",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "gstin",
+                                "label": "GSTIN",
+                                "input-type": "text",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "pan",
+                                "label": "PAN",
+                                "input-type": "text",
+                                "required": true
+                            },
+                            {
+                                "type": "Footer",
+                                "label": "Submit",
+                                "on-click-action": {
+                                    "name": "complete",
+                                    "payload": {
+                                        "entrepreneurName": "${udyam_registration_data.entrepreneurName}",
+                                        "aadhaarNumber": "${udyam_registration_data.aadhaarNumber}",
+                                        "enterpriseType": "${udyam_registration_data.enterpriseType}",
+                                        "dateOfIncorporation": "${udyam_registration_data.dateOfIncorporation}",
+                                        "dateOfCommencement": "${udyam_registration_data.dateOfCommencement}",
+                                        "gstin": "${udyam_registration_data.gstin}",
+                                        "pan": "${udyam_registration_data.pan}"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "version": "3.1",
+    "screens": [
+        {
+            "id": "VENTURE_DISPUTE_FORM",
+            "title": "Dispute Details Form",
+            "terminal": true,
+            "success": true,
+            "data": {},
+            "layout": {
+                "type": "SingleColumnLayout",
+                "children": [
+                    {
+                        "type": "Form",
+                        "name": "complainant_details_form",
+                        "children": [
+                            {
+                                "type": "TextHeading",
+                                "text": "Complainant Details"
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "complainant_name",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "complainant_email",
+                                "label": "Email",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "complainant_phone",
+                                "label": "Phone Number",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "complainant_address",
+                                "label": "Address",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "complainant_city",
+                                "label": "City",
+                                "required": true
+                            },
+                            {
+                                "type": "TextHeading",
+                                "text": "Respondent Details"
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "respondent_name",
+                                "label": "Name",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "respondent_email",
+                                "label": "Email",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "respondent_phone",
+                                "label": "Phone Number",
+                                "required": true
+                            },
+                            {
+                                "type": "TextHeading",
+                                "text": "Dispute Details"
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "dispute_details",
+                                "label": "Details of Dispute",
+                                "required": true
+                            },
+                            {
+                                "type": "TextInput",
+                                "name": "claim_value",
+                                "label": "Claim Value",
+                                "required": false
+                            }
+                        ]
+                    },
+                    {
+                        "type": "Footer",
+                        "label": "Submit",
+                        "on-click-action": {
+                            "name": "complete",
+                            "payload": {
+                                "c_name": "${form.complainant_name}",
+                                "c_email": "${form.complainant_email}",
+                                "c_phone": "${form.complainant_phone}",
+                                "c_address": "${form.complainant_address}",
+                                "c_city": "${form.complainant_city}",
+                                "r_name":"${form.respondent_name}",
+                                "r_email":"${form.respondent_email}",
+                                "r_phone":"${form.respondent_phone}",
+                                "dispute_details":"${form.dispute_details}",
+                                "claim_value":"${form.claim_value}"
+                            }
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}

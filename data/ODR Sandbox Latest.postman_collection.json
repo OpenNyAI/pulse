@@ -1,0 +1,558 @@
+{
+	"info": {
+		"_postman_id": "8b3bb7c7-073d-4e6c-a803-2613c6a2d886",
+		"name": "ODR Sandbox",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30848972"
+	},
+	"item": [
+		{
+			"name": "ODR Sandbox",
+			"item": [
+				{
+					"name": "Search1",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"transaction_id\": \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"action\": \"search\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n    \"version\": \"1.1.0\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"ttl\": \"PT10M\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"category\": {\r\n        \"descriptor\": {\r\n          \"code\": \"arbitration-service\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"transaction_id\": \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"action\": \"search\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n    \"version\": \"1.1.0\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"ttl\": \"PT10M\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"category\": {\r\n        \"descriptor\": {\r\n          \"code\": \"arbitration-service\"\r\n        }\r\n      },\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"financial disputes\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"transaction_id\": \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"action\": \"search\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n    \"version\": \"1.1.0\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"ttl\": \"PT10M\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"category\": {\r\n        \"descriptor\": {\r\n          \"code\": \"arbitration-service\"\r\n        }\r\n      },\r\n      \"provider\": {\r\n        \"id\": \"ODR001\"\r\n      },\r\n      \"item\": {\r\n        \"descriptor\": {\r\n          \"name\": \"financial disputes\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search4",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"transaction_id\": \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"action\": \"search\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n    \"version\": \"1.1.0\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"ttl\": \"PT10M\"\r\n  },\r\n  \"message\": {\r\n    \"intent\": {\r\n      \"category\": {\r\n        \"descriptor\": {\r\n          \"code\": \"arbitration-service\"\r\n        }\r\n      },\r\n      \"provider\": {\r\n        \"id\": \"ODR001\"\r\n      }\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/search",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Select",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"select\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"order\": {\r\n        \"provider\": {\r\n          \"id\": \"ODR001\"\r\n        },\r\n        \"items\": [\r\n          {\r\n            \"id\": \"ALPHA-ARB-01\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/select",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"select"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Init1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"init\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"order\": {\r\n        \"provider\": {\r\n          \"id\": \"ODR001\"\r\n        },\r\n        \"items\": [\r\n          {\r\n            \"id\": \"ALPHA-ARB-01\"\r\n          }\r\n        ],\r\n        \"billing\": {\r\n          \"name\": \"John Doe\",\r\n          \"email\": \"john.doe@example.com\",\r\n          \"address\": \"21A, ABC Appartments, HSR Layout, Bengaluru\",\r\n          \"city\": {\"name\":\"Bengaluru\"}\r\n        },\r\n        \"fulfillments\": [\r\n          {\r\n            \"customer\": {\r\n              \"person\": {\r\n                \"name\": \"John Doe\"\r\n              },\r\n              \"contact\": {\r\n                \"phone\": \"+91-9999999999\",\r\n                \"email\": \"john.doe@example.com\"\r\n              }\r\n            }\r\n          }\r\n        ],\r\n        \"tags\": [\r\n          {\r\n            \"descriptor\": {\r\n              \"name\": \"respondent\"\r\n            }\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/init",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"init"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Init2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"transaction_id\": \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"action\": \"init\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n    \"version\": \"1.1.0\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"ttl\": \"PT10M\"\r\n  },\r\n  \"message\": {\r\n    \"order\": {\r\n      \"provider\": {\r\n        \"id\": \"ODR001\"\r\n      },\r\n      \"items\": [\r\n        {\r\n          \"id\": \"ALPHA-ARB-01\",\r\n          \"xinput\": {\r\n            \"form\": {\r\n              \"submission_id\": \"c844d5f4-29c3-4398-b594-8b4716ef5dbf\"\r\n            }\r\n          }\r\n        }\r\n      ],\r\n      \"billing\": {\r\n        \"name\": \"John Doe\",\r\n        \"email\": \"john.doe@example.com\",\r\n        \"address\": \"21A, ABC Appartments, HSR Layout, Bengaluru\",\r\n        \"city\": {\"name\":\"Bengaluru\"}\r\n      },\r\n      \"fulfillments\": [\r\n        {\r\n          \"customer\": {\r\n            \"person\": {\r\n              \"name\": \"John Doe\"\r\n            },\r\n            \"contact\": {\r\n              \"phone\": \"+91-9999999999\",\r\n              \"email\": \"john.doe@example.com\"\r\n            }\r\n          }\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"consent-form\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/init",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"init"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Init3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"transaction_id\":  \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"action\": \"init\",\r\n    \"timestamp\": \"{{$timestamp}}\",\r\n    \"version\": \"1.1.0\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"ttl\": \"PT10M\"\r\n  },\r\n  \"message\": {\r\n    \"order\": {\r\n      \"provider\": {\r\n        \"id\": \"ODR001\"\r\n      },\r\n      \"items\": [\r\n        {\r\n          \"id\": \"ALPHA-ARB-01\",\r\n          \"xinput\": {\r\n            \"form\": {\r\n              \"submission_id\": \"a5893f12-b27f-4c93-a436-33fdd44b78a7\"\r\n            }\r\n          }\r\n        }\r\n      ],\r\n      \"billing\": {\r\n        \"name\": \"John Doe\",\r\n        \"email\": \"john.doe@example.com\",\r\n        \"address\": \"21A, ABC Appartments, HSR Layout, Bengaluru\",\r\n        \"city\": {\"name\":\"Bengaluru\"}\r\n      },\r\n      \"fulfillments\": [\r\n        {\r\n          \"customer\": {\r\n            \"person\": {\r\n              \"name\": \"John Doe\"\r\n            },\r\n            \"contact\": {\r\n              \"phone\": \"+91-9999999999\",\r\n              \"email\": \"john.doe@example.com\"\r\n            }\r\n          }\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"dispute-details\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/init",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"init"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.set(\"ORDER_ID\", pm.response.json().responses[0].message.order.id);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"confirm\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"order\": {\r\n        \"provider\": {\r\n          \"id\": \"ODR001\"\r\n        },\r\n        \"items\": [\r\n          {\r\n            \"id\": \"ALPHA-ARB-01\",\r\n            \"xinput\": {\r\n              \"form\": {\r\n                \"submission_id\": \"d075319f-08dd-47b5-b12a-30984e3a27f6\"\r\n              }\r\n            }\r\n          }\r\n        ],\r\n        \"billing\": {\r\n          \"name\": \"John Doe\",\r\n          \"email\": \"john.doe@example.com\",\r\n          \"address\": \"21A, ABC Appartments, HSR Layout, Bengaluru\",\r\n          \"city\": {\"name\": \"Bengaluru\"}\r\n        },\r\n        \"fulfillments\": [\r\n          {\r\n            \"customer\": {\r\n              \"person\": {\r\n                \"name\": \"John Doe\"\r\n              },\r\n              \"contact\": {\r\n                \"phone\": \"+91-9999999999\",\r\n                \"email\": \"john.doe@example.com\"\r\n              }\r\n            }\r\n          }\r\n        ],\r\n        \"payments\": [\r\n          {\r\n            \"params\": {\r\n              \"amount\": \"12000\",\r\n              \"currency\": \"INR\"\r\n            },\r\n            \"status\": \"PAID\"\r\n          }\r\n        ]\r\n      }\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/confirm",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"status\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"ttl\": \"PT10M\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"key\": \"in-progress\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\"\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"status\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"ttl\": \"PT10M\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"key\": \"in-progress-payment-after-hearing\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\"\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"status\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"ttl\": \"PT10M\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"key\": \"completed\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\"\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/status",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"status"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Rating",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\": \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"rating\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"ratings\": [\r\n        {\r\n          \"id\": \"{{ORDER_ID}}\",\r\n          \"rating_category\": \"Order\",\r\n          \"value\": \"5\"\r\n        }\r\n      ]\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/rating",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Support",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"support\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"support\": {\r\n        \"ref_id\": \"{{ORDER_ID}}\",\r\n        \"phone\": \"+919876543210\",\r\n        \"email\": \"john.doe@gmail.com\"\r\n      }\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/support",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"support"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update1",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"version\": \"1.1.0\",\r\n    \"action\": \"update\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"transaction_id\":  \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"ttl\": \"PT10M\",\r\n    \"timestamp\": \"{{$timestamp}}\"\r\n  },\r\n  \"message\": {\r\n    \"update_target\": \"order.fulfillments[0].agent\",\r\n    \"order\": {\r\n      \"id\": \"{{ORDER_ID}}\",\r\n      \"fulfillments\": [\r\n        {\r\n          \"agent\": {\r\n            \"person\": {\r\n              \"id\": \"ca063dc9d321\",\r\n              \"name\": \"Mr Adam Smith\"\r\n            }\r\n          }\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"agent\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"context\": {\r\n    \"domain\": \"{{domain}}\",\r\n    \"location\": {\r\n      \"country\": {\r\n        \"code\": \"IND\"\r\n      }\r\n    },\r\n    \"version\": \"1.1.0\",\r\n    \"action\": \"update\",\r\n    \"bap_uri\": \"{{bap_uri}}\",\r\n    \"bap_id\": \"{{bap_id}}\",\r\n    \"bpp_id\": \"{{bpp_id}}\",\r\n    \"bpp_uri\": \"{{bpp_uri}}\",\r\n    \"transaction_id\":  \"{{TRANS_ID}}\",\r\n    \"message_id\": \"{{$randomUUID}}\",\r\n    \"ttl\": \"PT10M\",\r\n    \"timestamp\": \"{{$timestamp}}\"\r\n  },\r\n  \"message\": {\r\n    \"update_target\": \"order.fulfillments[0].stops[0].time\",\r\n    \"order\": {\r\n      \"id\": \"{{ORDER_ID}}\",\r\n      \"fulfillments\": [\r\n        {\r\n          \"stops\": [\r\n            {\r\n              \"time\": {\r\n                \"label\": \"Hearing Date\",\r\n                \"Range\": {\r\n                  \"start\": \"2023-06-27T00:00:00.00Z\",\r\n                  \"end\": \"2023-08-02T00:00:00.00Z\"\r\n                }\r\n              }\r\n            }\r\n          ]\r\n        }\r\n      ],\r\n      \"tags\": [\r\n        {\r\n          \"descriptor\": {\r\n            \"name\": \"hearing-date\"\r\n          }\r\n        }\r\n      ]\r\n    }\r\n  }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/update",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.collectionVariables.unset(\"TRANS_ID\");",
+									"pm.collectionVariables.unset(\"Order_ID\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"context\": {\r\n      \"domain\": \"{{domain}}\",\r\n      \"location\": {\r\n        \"country\": {\r\n          \"code\": \"IND\"\r\n        }\r\n      },\r\n      \"transaction_id\":  \"{{TRANS_ID}}\",\r\n      \"message_id\": \"{{$randomUUID}}\",\r\n      \"action\": \"cancel\",\r\n      \"timestamp\": \"{{$timestamp}}\",\r\n      \"version\": \"1.1.0\",\r\n      \"bap_uri\": \"{{bap_uri}}\",\r\n      \"bap_id\": \"{{bap_id}}\",\r\n      \"bpp_id\": \"{{bpp_id}}\",\r\n      \"bpp_uri\": \"{{bpp_uri}}\",\r\n      \"ttl\": \"PT10M\"\r\n    },\r\n    \"message\": {\r\n      \"order_id\": \"{{ORDER_ID}}\",\r\n      \"cancellation_reason_id\": \"5\",\r\n      \"descriptor\": {\r\n        \"short_desc\": \"Dispute dropped\"\r\n      }\r\n    }\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/cancel",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"cancel"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"if (!pm.collectionVariables.has(\"TRANS_ID\")) {",
+					"    // Generate a uuid if its not already set",
+					"    const randomUUID = require('uuid').v4();",
+					"    // Set the unique identifier as a collection variable",
+					"    pm.collectionVariables.set(\"TRANS_ID\", randomUUID);",
+					"} else {",
+					"    console.log(\"TRANS_ID is already set\")",
+					"}"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "bap_id",
+			"value": "ps-bap-network.becknprotocol.io",
+			"type": "string"
+		},
+		{
+			"key": "bap_uri",
+			"value": "https://ps-bap-network.becknprotocol.io",
+			"type": "string"
+		},
+		{
+			"key": "bpp_id",
+			"value": "beckn-sandbox-bpp.becknprotocol.io",
+			"type": "string"
+		},
+		{
+			"key": "bpp_uri",
+			"value": "https://sandbox-bpp-network.becknprotocol.io/",
+			"type": "string"
+		},
+		{
+			"key": "base_url",
+			"value": "https://ps-bap-client.becknprotocol.io",
+			"type": "string"
+		},
+		{
+			"key": "domain",
+			"value": "online-dispute-resolution:0.1.0",
+			"type": "string"
+		},
+		{
+			"key": "ORDER_ID",
+			"value": ""
+		},
+		{
+			"key": "TRANS_ID",
+			"value": ""
+		}
+	]
+}
